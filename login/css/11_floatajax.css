@@ -1,0 +1,109 @@
+#headeraddcontrols {
+  height: 2vh;
+  cursor: move;
+  z-index: 10;
+  background-color: #4472c4;
+  color: #fff;
+}
+    .collapsible {
+      margin-left: 12vw;
+      background-color: white;
+      border-width: thick;
+      border-color: darkslategrey;
+    }
+.content {
+  padding-right: 1vw;
+  padding-left: 1vw;
+}
+    .grid-content {
+      display: grid;
+      grid-template-rows: 8vh 15vh;
+      grid-template-columns: 1fr;
+      grid-template-areas: "born" "sex";
+    }
+    .grid-content2 {
+        grid-template-areas: "born" "sex" "sp1" "preg";
+        grid-template-rows: 8vh 11vh 2vh 8vh;
+    }
+        #datasdiv {
+          grid-area: born;
+          display: grid;
+          height: 6vh;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr;
+          grid-template-areas: "datelbl1" "datepk1";
+          justify-self: center;
+        }
+            #datelabel {
+              grid-area: datelbl1;
+              color: black;
+              justify-self: center;
+              align-self: end;
+              font-size: 1vw;
+            }
+            #datepicker {
+              grid-area: datepk1;
+              width: 8vw;
+              height: 3vh;
+              border-radius: 1vh;
+              justify-self: center;
+            }
+        #sexo {
+          height: 6vh;
+          grid-area: sex;
+          display: grid;
+          grid-gap: 0px 1.5vw;
+          grid-template-areas: "sexlbl sexlbl" "radiom radiomlbl" "radiof radioflbl";
+          justify-content: center;
+        }
+            #sexlabel {
+              font-size: 1vw;
+              grid-area: sexlbl;
+              color: black;
+              justify-self: center;
+            }
+            #exampleRadios1 {
+              grid-area: radiom;
+              justify-self: end;
+              align-self: center;
+              height: 1.2vw;
+            }
+            #masculinelbl {
+              grid-area: radiomlbl;
+              color: black;
+              justify-self: center;
+              align-self: center;
+              font-size: 1vw;
+            }
+            #exampleRadios2 {
+              grid-area: radiof;
+              justify-self: end;
+              align-self: center;
+              height: 1.2vw;
+            }
+            #femininelbl {
+              grid-area: radioflbl;
+              color: black;
+              justify-self: center;
+              align-self: center;
+              font-size: 1vw;
+            }
+        #checkboxgravida {
+          grid-area: preg;
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr;
+          grid-template-areas: "preglbl" "pregcheck";
+        }
+            #labelgravida {
+              grid-area: preglbl;
+              color: black;
+              justify-self: center;
+              align-self: center;
+              font-size: 1vw;
+            }
+            #pregCheck {
+              grid-area: pregcheck;
+              justify-self: center;
+              align-self: start;
+            }

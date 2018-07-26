@@ -1,0 +1,59 @@
+html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #000000 !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "a1 b1 c1" "a2 login c2" "a3 b2 c3";
+}
+#login {
+  grid-area: login;
+  display: grid;
+}
+#login-form {
+  display: grid;
+  grid-template-rows: 55vmin 8vmin 8vmin 8vmin;
+  margin-bottom: 21vmin;
+  grid-template-columns: 1fr;
+}
+.img-23 {
+    align-self: end;
+    justify-self: center;
+    max-height: 25vh;
+    margin-bottom: 5vmin;
+}
+#login input {
+  justify-self: center;
+  display: block;
+  width: 50vmin;
+  height: 65%;
+  padding: 0;
+  font-size: 2.0vmin;
+  font-family: sans-serif;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  outline: none;
+  border-radius: 0.5vmin;
+  box-shadow: inset 0px -0.5vmin 4vmin rgba(100,100,100,0.2), 0px 0.1vmin 0.1vmin rgba(255,255,255,0.2);
+  margin-bottom: 1vmin;
+  margin: 0;
+  border-width: 0.2vmin;
+  padding-left: 2vmin;
+}
+#password {
+  width: 48vmin !important;
+}
+#username {
+  width: 48vmin !important;
+}
+#login #login-btn {
+  background: #55acee;
+  font-size: 2.5vmin;
+}

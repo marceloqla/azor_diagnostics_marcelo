@@ -1,0 +1,146 @@
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 4vmin;
+    position: absolute;
+    /*top: 1vmin;*/
+    top: 0.5vmin;
+    right: 1vmin;
+    width: 2vmin;
+    /*font-size: 2vmin;*/
+    font-size: 1.0vw;
+    font-weight: bold;
+}
+.select2-container {
+    justify-self: end;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    /*height: 80%;*/
+    height: 4vmin;
+    /*width: 55% !important;*/
+    width: 82%;
+}
+.select2-container--default .select2-selection--single {
+    /*background-color: #fff;*/
+    background-color: #4d88b8;
+    /*border: 0.2vmin solid #aaa;*/
+    border-radius: 1vmin;
+    border: 0.2vh solid #2d6898;
+    background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(73,132,180)), color-stop(1, rgb(97,155,203)) );
+    -webkit-box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+    box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+}
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 4vmin;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.select2-search--dropdown {
+    display: block;
+    line-height: 0;
+    padding: 1vmin;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white;
+    /*background-color: #5b95c3;*/
+    /*background-color: #4d88b8;*/
+    /*color: #444;*/
+    line-height: 4vmin;
+    text-align: center !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #2b638f;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    /*background-color: #5b95c3;*/
+    /*background-color: #4d88b8;*/
+    /*font-size: 2.5vmin;*/
+    font-size: 1.0vw;
+    font-weight: bold;
+    display: block;
+    padding-left: 2vmin;
+    padding-right: 5vmin;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.select2-results__option {
+    color: white;
+    background-color: #4d88b8;
+    /*font-size: 2.5vmin;*/
+    font-size: 1.0vw;
+    /*padding: 1.5vmin;*/
+    padding: 1vmin;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    height: 4vh;
+    background-color: #b6d1fb;
+    color: white;
+    font-weight: bold;
+    border: 0.2vmin solid #aaa;
+    font-size: 2.0vmin;
+}
+.select2-search--dropdown .select2-search__field {
+    padding: 1vmin;
+    width: 100%;
+    height: 5vmin;
+    box-sizing: border-box;
+}
+.select2-dropdown {
+    font-weight: bold;
+    /*background-color: #4d88b8;*/
+    background-color: #4d88b8;
+    /*background-color: white;*/
+    border: 0.2vmin solid #aaa;
+    border-radius: 1vmin;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 2vmin;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 2vmin;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    /*border-color: transparent transparent #888 transparent;*/
+    border-color: transparent transparent #FFFFFF transparent;
+    border-width: 0 1vmin 1.3vmin 1vmin;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    /*border-color: #888 transparent transparent transparent;*/
+    border-color: #FFFFFF transparent transparent transparent;
+    border-style: solid;
+    /*border-width: 5px 4px 0 4px;*/
+    border-width: 1.5vmin 1vmin 0 1vmin;
+    /* height: inherit; */
+    left: 50%;
+    margin-left: -0.8vmin;
+    margin-top: -0.8vmin;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}

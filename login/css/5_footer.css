@@ -1,0 +1,106 @@
+.footer {
+  display: grid;
+  grid-template-columns: 40vw 15vw 32vw;
+  grid-template-areas: "sp1 copyright sp2 contact_btn";
+}
+    #copyright {
+      grid-area: copyright;
+      font-size: 2vh;
+      color: white;
+      align-self: center;
+    }
+    .dropup {
+      grid-area: contact_btn;
+      position: relative;
+      display: inline-block;
+      justify-self: center;
+    }
+        #contact-btn {
+          align-self: center;
+          cursor: pointer;
+          padding: 0;
+          margin-top: 0.6vh;
+          border: 0;
+          height: 4vh;
+          white-space: nowrap;
+          font-weight: bold;
+          text-decoration: none;
+          color: #000000;
+          background-color: #383c40;
+          padding: 0.1vh 0.2vh;
+          /*border: 0.2vh solid #888383;*/
+          border: 0.2vh solid #000000;
+          background-image: linear-gradient(bottom, #1f2123 0%, #1f2123 100%);
+          background-image: -o-linear-gradient(bottom, #1f2123 0%, #1f2123 100%);
+          background-image: -moz-linear-gradient(bottom, #1f2123 0%, #1f2123 100%);
+          background-image: -webkit-linear-gradient(bottom, #1f2123 0%, #1f2123 100%);
+          background-image: -ms-linear-gradient(bottom, #1f2123 0%, #1f2123 100%);
+          background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #1f2123), color-stop(1, #000000) );
+          -webkit-box-shadow: 0px 0.2vh 0px #575858, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+          -moz-box-shadow: 0px 0.2vh 0px #575858, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+          /*box-shadow: 0px 0.2vh 0px #bfc4c7, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);*/
+          box-shadow: 0px 0.2vh 0px #575858, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+
+          border-radius: 1vh !important;
+          border-top-left-radius: 1vh !important;
+          border-top-right-radius: 1vh !important;
+          border-bottom-right-radius: 1vh !important;
+          border-bottom-left-radius: 1vh !important;
+          display: grid;
+        }
+            #span1 {
+              align-self: center;
+              justify-self: center;
+              font-family: unset;
+              font-size: 2vh;
+            }
+        .dropup-content {
+          border-radius: 1vmin;
+          padding: 1vmin;
+          right: 0;
+          bottom: 5.5vmin;
+          position: absolute;
+          background-color: #3e3e3e;
+          color: white;
+          z-index: 101;
+        }
+            .contact-form {
+              display: grid;
+            }
+                .labelsinpcnt {
+                  align-self: center;
+                  justify-self: center;
+                  font-size: 2.5vmin;
+                }
+                #nameinp {
+                  height: 5vmin;
+                  width: 30vmin;
+                }
+                #emailinp {
+                  height: 5vmin;
+                  width: 30vmin;
+                }
+                #telinp {
+                  height: 5vmin;
+                  width: 30vmin;
+                }
+                #msginp {
+                  height: 20vmin;
+                  width: 30vmin;
+                }
+                .recaptcha-center {
+                  height: 10vmin;
+                  width: 30vmin;
+                  margin-left: 1vmin;
+                  margin-top: 1.5vmin;
+                }
+                    #recaptchadiv {
+                      justify-self: center;
+                      align-self: center;
+                      z-index: 102;
+                    }
+                #send-mail-btn {
+                  align-self: center !important;
+                  justify-self: center !important;
+                  cursor: pointer;
+                }

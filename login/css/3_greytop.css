@@ -1,0 +1,143 @@
+.second-top-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+    #controls-div {
+      display: grid;
+      grid-template-rows: 1fr;
+      line-height: unset !important;
+    }
+    /* MAIN TREE CONTROLLER GRID ELEMENTS CSS STYLES*/
+    .controls-tree {
+      height: 6vh;
+      /*grid-template-columns: 1.3vw 15vw 0.5vw 9vw 0.5vw 9vw 0.5vw 9vw 0.5vw 9vw;*/
+      grid-template-columns: 1.3vw 15vw 0.5vw 9vw 0.5vw 9vw 0.5vw 9vw 0.5vw 11.52vw;
+      grid-template-areas: "sp0 searchbox sp1 levelone sp2 todosexames sp3 forareferencia sp4 select2 rb1";
+    }
+        #search_div {
+          grid-area: searchbox;
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 2fr 10fr;
+        }
+            #search_icon {
+              align-self: center;
+              justify-self: center;
+              font-size: 3vh;
+            }
+            .search_input_class {
+              height: 4vh;
+              width: 100%;
+              border-width: 0.4vh;
+              align-self: center;
+              font-size: 1vw;
+              padding: 0;
+            }
+        #leveloneref_tree {
+          grid-area: levelone;
+          justify-self: end;
+        }
+        #all_tree {
+          grid-area: todosexames;
+          justify-self: end;
+        }
+        #outsideref_tree {
+          grid-area: forareferencia;
+          justify-self: end;
+        }
+        .select2 {
+          grid-area: select2;
+          align-self: center;
+          justify-self: center;
+        }
+        /* HISTORY TREE CONTROLLER GRID ELEMENTS CSS STYLES*/
+
+    /* EAGLE VIEW CONTROLLER GRID ELEMENTS CSS STYLES*/
+    .controls-eagle {
+      height: 6vh;
+      /*grid-template-columns: 1.3vw 15vw 0.5vw 9vw 0.5vw 9vw 0.5vw 13.5vw 1fr;*/
+      grid-template-columns: 1.3vw 15vw 0.5vw 9vw 0.5vw 9vw 0.5vw 13.5vw 0.5vw 9vw 1fr;
+      /*grid-template-areas: "sp0 search_eagle_div sp1 allpushbtn sp2 outsideref sp3 piramidechkdiv rb1 rb2 rb3";*/
+      grid-template-areas: "sp0 search_eagle_div sp1 allpushbtn sp2 outsideref sp3 piramidechkdiv sp4 select2 rbz3";
+    }
+        #search_eagle_div {
+          grid-area: search_eagle_div;
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 2fr 10fr;
+        }
+            #search_icon_eagle {
+              align-self: center;
+              justify-self: center;
+              font-size: 3vh;
+            }
+            #search_eagle {
+              border-width: 0.4vh;
+              align-self: center;
+              font-size: 1vw;
+              height: 4vh;
+              padding: 0;
+            }
+        #allpushbtn {
+          height: 4vh;
+          width: 82%;
+          grid-area: allpushbtn;
+          align-self: center;
+          justify-self: end;
+        }
+        #piramide_check_div {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: 1fr 10fr;
+          align-self: center;
+          justify-self: center;
+          grid-area: piramidechkdiv;
+          grid-template-areas: "piramide_check piramide_check_label";
+        }
+            #piramide_check {
+              grid-area: piramide_check;
+              align-self: center;
+              justify-self: end;
+              height: 90%;
+            }
+            #piramide_check_label {
+              font-size: 1.1vw;
+              grid-area: piramide_check_label;
+              align-self: center;
+              justify-self: start;
+              margin-bottom: unset;
+            }
+        #outsideref {
+          height: 4vh;
+          width: 82%;
+          grid-area: outsideref;
+          align-self: center;
+          justify-self: end;
+        }
+        .select2 {
+          grid-area: select2;
+          align-self: center;
+          justify-self: center;
+        }
+
+    /* EXAMS VIEW CONTROLLER GRID ELEMENTS CSS STYLES*/
+    .controls-exams {
+      height: 6vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "lb1 leftbtn imageindexp rightbtn rb1";
+    }
+        #leftmvbtn {
+          grid-area: leftbtn;
+          display: grid;
+        }
+        #imageindexp {
+          grid-area: imageindexp;
+          font-size: 3vh;
+          display: grid;
+          align-content: start;
+          justify-content: center;
+        }
+        #rightmvbtn {
+          grid-area: rightbtn;
+          display: grid;
+        }

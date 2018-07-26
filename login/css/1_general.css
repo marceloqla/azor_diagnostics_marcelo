@@ -1,0 +1,273 @@
+head {
+  display: none;
+}
+body, html {
+  display: block;
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  font-weight: unset !important;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+label {
+  margin-bottom: 0;
+}
+
+.top-panel {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    margin: 0;
+}
+.second-top-panel {
+    position: fixed;
+    top: 10vh;
+    left: 6vw;
+    z-index: 98;
+    width: 94vw;
+    height: 6vh;
+    background-color: #e6e6e6;
+    margin: 0;
+}
+.left-panel {
+    height: 100vh;
+    width: 6vw;
+    position: fixed;
+    z-index: 99;
+    top: 10vh;
+    left: 0;
+    background-color: #4472c4;
+    overflow-x: hidden;
+    padding-top: 2vh;
+}
+#main_section {
+  position: absolute;
+  top: 15.5vh;
+  left: 7vw;
+  height: 70vh;
+  width: 90vw;
+  display: grid;
+}
+#additionalcontrols {
+  bottom: 50px;
+  position: fixed;
+  z-index: 1000;
+  background-color: #f1f1f1;
+  border: 0.01vmin solid #d3d3d3;
+  text-align: center;
+}
+#loadingDiv {
+  position: fixed;
+  top: 30vh;
+  left: 44vw;
+  width: 100%;
+  height: 100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 5vh;
+  width: 100vw;
+  z-index: 102;
+  background-color: black;
+  margin: 0;
+}
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  pointer-events: none;
+}
+div.tooltip_a {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: white;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 8px;
+  -ms-transform: scale(0.33);
+  -webkit-transform: scale(0.33);
+  transform: scale(0.33);
+  transform-origin: 0 0;
+  -webkit-filter: sepia(80%);
+}
+
+/* TREE TOOLTIP SHOW/HIDE ACCESSORY CLASSES*/
+.focus-in-tooltip-div {
+  -webkit-transition: all 200ms ease-in-out 200ms;
+  -moz-transition: all 200ms ease-in-out 200ms;
+  -o-transition: all 200ms ease-in-out 200ms;
+  transition: all 200ms ease-in-out 200ms;
+  opacity: 1;
+  pointer-events: auto;
+}
+.focus-out-tooltip-div {
+  -webkit-transition: all 200ms ease-in-out 200ms;
+  -moz-transition: all 200ms ease-in-out 200ms;
+  -o-transition: all 200ms ease-in-out 200ms;
+  transition: all 200ms ease-in-out 200ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* BUTTONS AND BUTTONS SPANS ACCESSORY CLASSES*/
+.white-color-text {
+  color: white;
+}
+.common-buttons {
+    height: 4vh;
+    width: 82%;
+    align-self: center;
+    justify-self: center;
+}
+.but2 {
+    font-size: 2vh;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #538fbe;
+    padding: 0.1vh 0.2vh;
+    border: 0.2vh solid #2d6898;
+    background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(73,132,180)), color-stop(1, rgb(97,155,203)) );
+    -webkit-box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+    box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+    border-radius: 1vh !important;
+    border-top-left-radius: 1vh !important;
+    border-top-right-radius: 1vh !important;
+    border-bottom-right-radius: 1vh !important;
+    border-bottom-left-radius: 1vh !important;
+}
+.but3 {
+  align-self: center;
+  justify-self: center;
+  font-size: 2.2vh;
+  white-space: nowrap;
+  font-weight: bold;
+  background-color: #4472c4;
+  padding: 0.5vh;
+  border-width: 0.2vh;
+  border-style: solid;
+  border-color: #2d6898;
+  border-radius: 1vh;
+  background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(73,132,180)), color-stop(1, rgb(97,155,203)) );
+  -webkit-box-shadow: 0px 1px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  -moz-box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+  box-shadow: 0px 0.2vh 0px #2b638f, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+}
+.but4 {
+  align-self: center;
+  justify-self: center;
+  font-size: 2.2vh;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #8d9094;
+  padding: 0.5vh;
+  border-width: 0.2vh;
+  border-style: solid;
+  border-color: #6d6d6d;
+  border-radius: 1vh;
+  background-image: linear-gradient(bottom, rgb(107, 111, 115) 0%, rgb(172, 176, 179) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(107, 111, 115) 0%, rgb(172, 176, 179) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(107, 111, 115) 0%, rgb(172, 176, 179) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(107, 111, 115) 0%, rgb(172, 176, 179) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(107, 111, 115) 0%, rgb(172, 176, 179) 100%);
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(107, 111, 115)), color-stop(1, rgb(172, 176, 179)) );
+  -webkit-box-shadow: 0px 1px 0px #2f3031, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  -moz-box-shadow: 0px 0.2vh 0px #2f3031, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+  box-shadow: 0px 0.2vh 0px #2f3031, 0px 0.6vh 3vh rgba(0,0,0,.4), inset 0px 0.2vh 0px rgba(255,255,255,.3), inset 0px 0px 0.6vh rgba(255,255,255,.5);
+}
+.common-buttons-text {
+  font-size: 1.0vw;
+}
+.w3-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 3vh;
+  align-self: start;
+  justify-self: center;
+}
+
+/* LEFT FLOAT ACCESSORY CLASSES*/
+.icon-divs {
+  display: grid;
+}
+.left-icons {
+  width: 8vmin;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+
+
+/* FOOTER FORM ACCESSORY CLASSES*/
+.inpfont {
+  align-self: center;
+  justify-self: center;
+  font-size: 2.2vmin;
+}
+.labelsinpcnt {
+  align-self: center;
+  justify-self: center;
+  font-size: 2.5vmin;
+}
+a:hover {
+ color: white;
+ text-decoration: none;
+}
+
+/* EXAM SECTION ACCESSORY CLASSES*/
+
+.img-wrapper2 {
+  -ms-transform: scale(0.750) !important;
+  -webkit-transform: scale(0.750) !important;
+  transform: scale(0.750) !important;
+  transform-origin: 50% 5%;
+}
+
+/* FLOAT DIV ACCESSORY CLASSES*/
+.half-transparent {
+  opacity: 0.5 !important;
+}
+.yes-right {
+  right: 50px;
+}
+.form-check-label {
+    margin-bottom: 0;
+}
+.form-control {
+  padding: 0;
+  border: 0;
+  font-size: 1vw;
+  border-radius: 0;
+}

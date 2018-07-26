@@ -1,0 +1,711 @@
+/* Helper CSS classes below: */
+/** {
+    box-sizing: border-box;
+}*/
+
+body {
+    overflow-x:hidden;
+}
+svg {
+  min-width: 100% !important;
+}
+
+/* Font Sizes */
+label {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+.text-controls {
+  font-size: 1.0em;
+}
+input,
+input::-webkit-input-placeholder {
+    font-size: 0.95em;
+    line-height: 3;
+}
+#sexlabel {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+#datepicker {
+  font-size: 1.0em;
+}
+#datepicker2 {
+  font-size: 1.0em;
+}
+
+.no-display {
+  display: none !important;
+}
+
+.main-content {
+  /*class used by JS for display changing*/
+}
+
+div.tooltip_a {
+  position: absolute;
+  text-align: center;
+  /*width: 60px;*/
+  /*width: 40em;*/
+  /*height: 20em;*/
+  /*height: 28px;*/
+  padding: 2px;
+  font: 12px sans-serif;
+  background: black;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#loadingDiv {
+  position:fixed;
+  top: 50%;
+  left: 40%;
+  width:100%;
+  height:100%;
+}
+
+.image-tool {
+  /*max-width: 100%;*/
+  /*max-height: 20em;*/
+}
+
+/* D3 Viz classes below: */
+
+.node {
+  margin-bottom: 1em;
+}
+
+.node circle.fill {
+  stroke-width: 1px !important;
+  r: 5 !important;
+  fill: #777aca !important;
+  stroke: black !important;
+}
+
+.node circle.green_c {
+  stroke-width: 1px !important;
+  r: 5 !important;
+  fill: #73ce73 !important;
+  stroke: black !important;
+}
+
+.node circle.yellow_c {
+  stroke-width: 1px !important;
+  r: 5 !important;
+  fill: yellow !important;
+  stroke: black !important;
+}
+
+.node circle.red_c {
+  stroke-width: 1px !important;
+  r: 5 !important;
+  fill: #e87a7a !important;
+  stroke: black !important;
+}
+
+a:hover {
+     color: white;
+     text-decoration: none;
+}
+
+.node text {
+  /*font: 14px sans-serif;*/
+  font: 1.0em sans-serif;
+}
+
+@media screen and (min-width: 1700px) {
+  .node text {
+    font: 1.2em sans-serif;
+  }
+  label {
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+  .text-controls {
+    font-size: 1.2em;
+  }
+  input,
+  input::-webkit-input-placeholder {
+      font-size: 1.15em;
+  }
+  input[type="radio"] {
+      -ms-transform: scale(1.35); /* IE 9 */
+      -webkit-transform: scale(1.35); /* Chrome, Safari, Opera */
+      transform: scale(1.35);
+  }
+  input[type="checkbox"] {
+      -ms-transform: scale(1.35); /* IE 9 */
+      -webkit-transform: scale(1.35); /* Chrome, Safari, Opera */
+      transform: scale(1.35);
+  }
+  #sexlabel {
+    font-size: 1.3em;
+    margin-bottom: 0;
+  }
+  #datepicker {
+    font-size: 1.15em;
+  }
+  #datepicker2 {
+    font-size: 1.15em;
+  }
+  .w3-button {
+    font-size: 2.0em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .node text {
+    font: 1.4em sans-serif;
+  }
+  label {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  .text-controls {
+    font-size: 1.4em;
+  }
+  input,
+  input::-webkit-input-placeholder {
+      font-size: 1.25em;
+  }
+  input[type="radio"] {
+      -ms-transform: scale(1.65); /* IE 9 */
+      -webkit-transform: scale(1.65); /* Chrome, Safari, Opera */
+      transform: scale(1.65);
+  }
+  input[type="checkbox"] {
+      -ms-transform: scale(1.65); /* IE 9 */
+      -webkit-transform: scale(1.65); /* Chrome, Safari, Opera */
+      transform: scale(1.65);
+  }
+  #sexlabel {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  #datepicker {
+    font-size: 1.25em;
+  }
+  #datepicker2 {
+    font-size: 1.25em;
+  }
+  .w3-button {
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .node text {
+    font: 1.7em sans-serif;
+  }
+  label {
+    font-size: 2.1em;
+    margin-bottom: 0;
+  }
+  .text-controls {
+    font-size: 1.7em;
+  }
+  input,
+  input::-webkit-input-placeholder {
+    font-size: 1.45em;
+  }
+  input[type="radio"] {
+      -ms-transform: scale(2.0); /* IE 9 */
+      -webkit-transform: scale(2.0); /* Chrome, Safari, Opera */
+      transform: scale(2.0);
+  }
+  input[type="checkbox"] {
+      -ms-transform: scale(2.0); /* IE 9 */
+      -webkit-transform: scale(2.0); /* Chrome, Safari, Opera */
+      transform: scale(2.0);
+  }
+  #sexlabel {
+    font-size: 2.1em;
+    margin-bottom: 0;
+  }
+  #datepicker {
+    font-size: 1.75em;
+  }
+  #datepicker2 {
+    font-size: 1.75em;
+  }
+  .w3-button {
+    font-size: 2.4em;
+  }
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+
+/* Grid Definition classes below: */
+
+#app {
+  height: 100vh;
+  /*grid-template-rows: 1fr 8fr 8fr 8fr;*/
+}
+
+.app-exam {
+    display: grid;
+    grid-template-rows: 1fr 12fr 0px 0px !important;
+    grid-template-columns: 1fr  !important;
+    grid-template-areas :
+    "top-panel"
+    "exames-all"
+    "doctor-all"
+    "patient-all"  !important;
+}
+
+.app-doctor {
+  display: grid;
+  grid-template-rows: 1fr 0px 10fr 0px !important;
+  grid-template-columns: 1fr  !important;
+  grid-template-areas :
+  "top-panel"
+  "exames-all"
+  "doctor-all"
+  "patient-all"  !important;
+}
+
+.app-patient {
+  display: grid;
+  grid-template-rows: 1fr 0px 0px 10fr !important;
+  grid-template-columns: 1fr  !important;
+  grid-template-areas :
+  "top-panel"
+  "exames-all"
+  "doctor-all"
+  "patient-all"  !important;
+}
+
+/* Top Panel grid*/
+.top-panel {
+    /*height: 20vh;*/
+    grid-area: top-panel;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hd"
+    "hc";
+}
+.header-top {
+    grid-area: hd;
+    /*background-color: #343a40!important;*/
+    background-color: #000000!important;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 3fr 3fr 3fr 1fr 3fr;
+    grid-template-areas:
+    "logo search born examdate sex preg";
+}
+#logoimage {
+  grid-area: logo;
+  margin-right: 5%;
+  width: 15vw;
+  border-radius: 5%;
+  justify-self: left;
+  align-self: center;
+}
+
+#seg-select-div {
+  grid-area: search;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "searchlbl"
+  "searchbox";
+}
+#label-seg-select {
+  grid-area: searchlbl;
+  color: white;
+  justify-self: center;
+  align-self: end;
+}
+#busca2 {
+  grid-area: searchbox;
+  width: 75%;
+  height: 90%;
+  justify-self: center;
+}
+#datasdiv {
+  grid-area: born;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "datelbl1"
+  "datepk1";
+}
+#datelabel {
+  grid-area: datelbl1;
+  color: white;
+  justify-self: center;
+  align-self: end;
+}
+#datepicker {
+  grid-area: datepk1;
+  width: 75%;
+  height: 90%;
+  justify-self: center;
+}
+#datasdiv2 {
+  grid-area: examdate;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "datelbl2"
+  "datepk2";
+  justify-self: start;
+}
+#datelabel2 {
+  grid-area: datelbl2;
+  color: white;
+  justify-self: center;
+  align-self: end;
+}
+#datepicker2 {
+  grid-area: datepk2;
+  width: 75%;
+  height: 90%;
+  justify-self: center;
+}
+#sexo {
+  max-height: 60%;
+  grid-area: sex;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px 10px;
+  grid-template-areas:
+  "sexlbl sexlbl"
+  "radiom radiomlbl"
+  "radiof radioflbl";
+  justify-self: start;
+}
+#sexlabel {
+  grid-area: sexlbl;
+  color: white;
+  justify-self: center;
+}
+#exampleRadios1 {
+  grid-area: radiom;
+  justify-self: end;
+  align-self: center;
+}
+#masculinelbl {
+  grid-area: radiomlbl;
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+#exampleRadios2 {
+  grid-area: radiof;
+  justify-self: end;
+  align-self: center;
+}
+#femininelbl {
+  grid-area: radioflbl;
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+#checkboxgravida {
+  grid-area: preg;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "preglbl"
+  "pregcheck";
+}
+#labelgravida {
+  grid-area: preglbl;
+  color: white;
+  justify-self: center;
+  align-self: center;
+
+}
+#pregCheck {
+  grid-area: pregcheck;
+  justify-self: center;
+  align-self: start;
+}
+/*end of top panel*/
+.header-controls {
+    grid-area: hc;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 10fr;
+    grid-template-areas:
+    "exambtn docbtn patbtn";
+}
+.header-controls button{
+  background-color: #f1f1f1;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  /*padding: 14px 16px;*/
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.header-controls button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.header-controls button.active {
+    background-color: #ccc;
+}
+
+#exames-but {
+  grid-area: exambtn;
+  /*justify-self: center;*/
+  align-self: start;
+
+}
+#doctor-but {
+  grid-area: docbtn;
+  /*justify-self: center;*/
+  align-self: start;
+
+}
+#patient-but {
+  grid-area: patbtn;
+  /*justify-self: center;*/
+  align-self: start;
+
+}
+/*end of change view buttons*/
+
+
+/* Exames Grid*/
+.exames-content {
+    /*height: 80vh;*/
+    grid-area: exames-all;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "em";
+}
+.exames-div {
+  /*height: 80vh;*/
+  grid-area: em;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 15fr 1fr 22fr 1fr 15fr;
+  grid-template-areas:
+  "stuff leftmvbtn imagescarrousel rightmvbtn stuff2";
+}
+#leftmvbtn {
+  grid-area: leftmvbtn;
+  align-self: center;
+  justify-content: center;
+}
+#imagescarrousel {
+  grid-area: imagescarrousel;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+#rightmvbtn {
+  grid-area: rightmvbtn;
+  align-self: center;
+  justify-content: center;
+}
+.w3-button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.mySlides {
+  display: grid;
+}
+.img-wrapper2 {
+    max-height: 75vh;
+    max-width: 100%;
+    grid-column: 1/5;
+    grid-row: 1/3;
+}
+.exam-sub {
+    color: red;
+    font-size: large;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    /*margin-top: -10%;*/
+}
+
+/* Medic Content Grid*/
+.medic-content {
+    grid-area: doctor-all;
+    /*overflow-y: scroll;*/
+    /*overflow-x: scroll;*/
+    display: grid;
+    grid-template-rows: 5vh 22fr;
+    /*grid-template-rows: 1fr 22fr;*/
+    /*grid-template-rows: 5vh 10vh;*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "lc rcc"
+    "doct doct";
+}
+
+.right-controls-container  {
+  grid-area: rcc;
+  background-color: white;
+  border-left-style: initial;
+  border-left-style: solid;
+  border-left-color: #ccc;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "rc";
+}
+
+.right-controls  {
+  grid-area: rc;
+  background-color: white;
+  /*border-left-width: 1px;*/
+  /*border-left-style: initial;
+  border-left-style: solid;
+  border-left-color: #ccc;*/
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 4fr 22fr;
+  grid-template-areas:
+  "piramidecheck piramidelbl";
+}
+#piramide1 {
+  grid-area: piramidecheck;
+  justify-self: end;
+  align-self: center;
+}
+#labelpiramide {
+  grid-area: piramidelbl;
+  justify-self: center;
+  align-self: center;
+
+}
+.left-controls {
+  grid-area: lc;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "firstlevel allexames outreference";
+}
+#firstlevel2 {
+  grid-area: firstlevel;
+  justify-self: center;
+  align-self: center;
+
+}
+#todosexames2 {
+  grid-area: allexames;
+  justify-self: center;
+  align-self: center;
+
+}
+#outreference2 {
+  grid-area: outreference;
+  justify-self: center;
+  align-self: center;
+}
+.doctor-tree-div {
+  grid-area: doct;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "d3doctree eagleimages";
+}
+#doctor-tree {
+  grid-area: d3doctree;
+
+}
+#eagle-images {
+  grid-area: eagleimages;
+  border-left-style: initial;
+  border-left-style: solid;
+  border-left-color: #ccc;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "currentimage";
+  height: 3000px;
+  overflow-x: scroll;
+}
+.currentimage {
+  max-height: 75vh;
+  grid-area: currentimage;
+}
+.image-class1 {
+  /*position: absolute;*/
+}
+
+/* Patient Content Grid*/
+.patient-content {
+    grid-area: patient-all;
+    max-height: 80vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: 1fr 22fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "patt-controls"
+    "patt";
+}
+#controls-left {
+  grid-area: patt-controls;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 8fr;
+  grid-template-areas:
+  "firstlevel todosexames";
+}
+#firstlevel {
+  grid-area: firstlevel;
+
+}
+#todosexames {
+  grid-area: todosexames;
+
+}
+.patient-tree-div {
+  grid-area: patt;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "d3pattree referenceimages";
+}
+#patient-tree {
+  grid-area: d3pattree;
+}
+#reference-images {
+  grid-area: referenceimages;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "currentrefimage";
+}
+#currentrefimage {
+  grid-area: currentrefimage;
+  max-height: 75vh;
+}

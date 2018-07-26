@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="UTF-8">
+
+      <!-- Web Site Title defined Here  -->
+      <title>Azor Diagnostics</title>
+
+      <!-- Web Site Icon defined here -->
+      <link rel="icon" href="img/azor_logo_II_Crop_circle.png">
+
+      <!-- BOOTSTRAP CSS LOADED HERE -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+      <!-- FONT AWESOME ICONS LOADED HERE -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+      <!-- <link href="css/font-awesome.min.css" rel="stylesheet"/> -->
+
+      <!-- FLOAT AJAX ELEMENT PIKADAY CSS LOADED HERE -->
+      <link rel="stylesheet" href="css/pikaday.css">
+
+      <!-- GENERAL HTML/BODY ELEMENTS (BLACK TOP, GREY TOP, LEFT, FOOTER, FLOAT, MAIN, TOOLTIPS) STYLING W NO GRID  -->
+      <link rel="stylesheet" href="css/1_general.css"> <!-- O -->
+
+      <!-- BLACK TOP GRID ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/2_blacktop.css"> <!-- X -->
+
+      <!-- GREY TOP GRID ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/3_greytop.css"> <!-- X -->
+
+      <!-- LEFT GRID ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/4_leftnav.css"> <!-- X -->
+
+      <!-- FOOTER GRID ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/5_footer.css"> <!-- X -->
+
+        <!-- CONTACT DIV ELEMENTS STYLING - Inside footer atm -->
+        <!-- <link rel="stylesheet" href="css/6_contactdiv.css"> -->
+
+      <!-- MAIN GRID TREE ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/7_maintree.css"> <!-- X -->
+
+      <!-- MAIN GRID HISTORY ELEMENTS STYLING  Same as above atm-->
+      <!--<link rel="stylesheet" href="css/8_mainhistory.css"> -->
+
+      <!-- MAIN GRID EAGLE ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/9_maineagle.css"> <!-- X -->
+
+      <!-- MAIN GRID EXAMS ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/10_mainexams.css"> <!-- X -->
+
+      <!-- FLOAT GRID ELEMENTS STYLING -->
+      <link rel="stylesheet" href="css/11_floatajax.css"> <!-- X -->
+
+      <!-- ALL STYLES LOADED HERE -->
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+      <!-- JQUERY LOADED HERE -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+      <script src="js/jquery.min.js"></script>
+
+      <!-- SELECT 2 DROPDOWN WITH SEARCH LIBRARY LOADED HERE -->
+      <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> -->
+      <link href="css/select2.min.css" rel="stylesheet" />
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> -->
+      <script src="js/select2.min.js"></script>
+
+      <!-- SELECT 2 RESTYLYING OF ELEMENTS (FOR ZOOMING BEHAVIOUR HERE) -->
+      <link rel="stylesheet" href="css/select2.css">
+
+      <!-- GOOGLE RECAPTCHA API LINK HERE -->
+      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=implict"
+        async defer>
+      </script>
+
+  </head>
+
+
+  <body>
+    <div id="app" class="app-exam">
+
+      <!-- TOP BLACK PANEL STARTS HERE -->
+      <div class="top-panel">
+        <div class="header-top">
+          <!-- MAIN BLACK PANEL LOGO -->
+          <img id="logoimage" src="img/azor_logo_II.png" class="image1">
+
+          <!-- PATIENT INFO DIV -->
+          <div id="patientinfo">
+            <!-- PATIENT INFO ICON - USED FOR HIDING THE AJAX FLOAT ELEMENT-->
+            <button id="show_toggle_btn" class="erase-formatting">
+              <img id="patientinfoicon" src="img/patient_256.png" alt="">
+            </button>
+
+            <!-- PATIENT INFO TEXT -->
+            <div id="patientinfotext">
+              <span id="patient_name_define" class="p-info"></span>
+              <span id="sex_age" class="p-info"></span>
+              <span id="patient_phone" class="p-info"></span>
+            </div>
+
+            <select id="patient_select" class="p-select"></select>
+
+          </div>
+
+          <!-- DOCTOR INFO DIV  -->
+          <div id="doctorinfo">
+
+            <!-- DOCTOR ICON -->
+            <i id="doctorinfoicon" class="fa fa-user-md"></i>
+
+            <!-- DOCTOR INFO TEXT -->
+            <div id="doctorusername">
+              <span id="doctorname">Dr.</span>
+              <span>CRM 123456/RJ</span>
+            </div>
+
+            <!-- LOGOUT BTN -->
+            <div id="logoutdiv">
+              <a id="a1" class="but3" href="../">
+                <span class="white-color-text">Log out</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP GREY PANEL STARTS HERE (js generation of elements) -->
+      <div id="second-top-panel" class="second-top-panel">
+        <div id="controls-div" class="viz-controls">
+        </div>
+      </div>
+
+
+      <!-- LEFT BLUE PANEL STARTS HERE -->
+      <div class="left-panel">
+        <div class="current-controls">
+
+          <!-- DIV WITH TREE ICONS -->
+          <div id="divt1" class="icon-divs" onclick="preLoadTree(false)">
+            <img id="tree-icon" class="left-icons d-none" src="img/01 icon tree black -- 256.png" alt="">
+            <img id="tree-icon2" class="left-icons" src="img/01 icon tree gray -- 256.png" alt="">
+          </div>
+
+          <!-- DIV WITH HISTORY ICONS -->
+          <div id="divt2" class="icon-divs" onclick="showHistTree()">
+            <img id="hist-icon" class="left-icons" src="img/04 icon hist black -- 256.png" alt="">
+            <img id="hist-icon2" class="left-icons d-none" src="img/04 icon hist grey -- 256.png" alt="">
+          </div>
+
+          <!-- DIV WITH EAGLE ICONS -->
+          <div id="dive2" class="icon-divs" onclick="showEagle()">
+            <img id="eagle-icon" class="left-icons" src="img/02 icon eagle3 black -- 256.png" alt="">
+            <img id="eagle-icon2" class="left-icons d-none" src="img/02 icon eagle3 gray -- 256.png" alt="">
+          </div>
+
+          <!-- DIV WITH EXAM ICONS -->
+          <div id="divex3" class="icon-divs" onclick="showExams()">
+            <img id="exams-icon" class="left-icons" src="img/03 icon exam black -- 256.png" alt="">
+            <img id="exams-icon2" class="left-icons d-none" src="img/03 icon exam gray -- 256.png" alt="">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOTTOM FOOTER STARTS HERE -->
+      <div class="footer">
+
+        <!-- COPYRIGHT TEXT -->
+        <span id="copyright">(c) 2018 Azor Diagnostics</span>
+
+        <!-- DROPUP CONTAINER FOR CONTACT BTN AND DIV -->
+        <div class="dropup">
+
+          <!-- BUTTON FOR OPENING AND CLOSING DROPUP -->
+          <button id="contact-btn" class="" onclick="showDropUp()">
+            <span id="span1" class="white-color-text">Contato</span>
+          </button>
+
+          <!-- DROPUP DIV CONTAINING FORM -->
+          <div id="dropup" class="dropup-content d-none">
+            <div id="contact_formulary" class="contact-form">
+
+              <!-- NAME LABEL AND TEXT INPUT  -->
+              <label class="labelsinpcnt" for="nameinp">Nome:</label>
+              <input class="inpfont" id="nameinp" type="text" value="" placeholder="Seu nome aqui" required>
+
+              <!-- E-MAIL LABEL AND TEXT INPUT  -->
+              <label class="labelsinpcnt" for="emailinp">E-mail:</label>
+              <input class="inpfont" id="emailinp" type="email" value="" placeholder="examplo@email.com" required>
+
+              <!-- TELEPHONE LABEL AND TEXT INPUT  -->
+              <label class="labelsinpcnt" for="telinp">Telefone:</label>
+              <input class="inpfont" id="telinp" type="tel" value="" placeholder="(XX)XXXXX-XXXX" pattern="\(?[0-9]{2}\)?\w?[0-9]{4,5}\-?[0-9]{4}}" required>
+
+              <!-- MENSAGE LABEL AND TEXT INPUT  -->
+              <label class="labelsinpcnt" for="msginp">Mensagem:</label>
+              <textarea class="inpfont" id="msginp" placeholder="Escreva aqui sua mensagem"></textarea>
+
+              <!-- GOOGLE RECAPTCHA DIV  -->
+              <div class="recaptcha-center">
+                <div id="recaptchadiv"></div>
+              </div>
+
+              <!-- E-MAIL SENDING BTN  -->
+              <button type="submit" id="send-mail-btn" class="but4" onclick="sendMail()">
+                <span id="span2"  class="white-color-text">Submit</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FLOAT ELEMENT FOR AJAX STARTS HERE -->
+      <div id="additionalcontrols" class="yes-right half-transparent">
+
+        <!-- BLUE HEADER OF FLOAT DIV -->
+        <div id="headeraddcontrols">
+          <button class="d-none collapsible">
+            <i class="fa fa-window-minimize"></i>
+          </button>
+        </div>
+
+        <!-- FLOAT DIV INNER CONTENT -->
+        <div class="content">
+          <div class="grid-content">
+
+            <!-- DATEPICKER FROM PIKADAY FOR BIRTH DATE -->
+            <div id="datasdiv" class="text-center">
+              <label class="form-check-label" for="datepicker" id="datelabel">Nascimento:</label>
+              <input class="form-control" type="text" id="datepicker">
+            </div>
+
+            <!-- SEX SELECTION DIV -->
+            <div id="sexo" class="">
+
+              <!-- MAIN LABEL -->
+              <span id="sexlabel">Sexo:</span>
+
+              <!-- INPUT AND LABEL FOR MALE -->
+              <input type="radio" name="exampleRadios" id="exampleRadios1" value="masculino" checked>
+              <label id="masculinelbl" class="radio-inline1" for="exampleRadios1">Masculino</label>
+
+              <!-- INPUT AND LABEL FOR FEMALE -->
+              <input type="radio" name="exampleRadios" id="exampleRadios2" value="feminino">
+              <label id="femininelbl" class="radio-inline1" for="exampleRadios2">Feminino</label>
+            </div>
+
+            <!-- PREGNANCY CHECKBOX -->
+            <div id="checkboxgravida" class="text-center d-none">
+
+                <!-- INPUT AND LABEL FOR PREGNANCY -->
+                <label id="labelgravida" class="form-check-label" for="pregCheck">Grávida?</label>
+                <input class="" type="checkbox" name="exampleCheck" id="pregCheck" value="gravida">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN SECTION STARTS HERE (js partial generation of content) -->
+      <section id="main_section">
+
+        <!-- TREE MAIN DIV FOR D3 CONTENT GEN -->
+        <div id="doctor" class="main-content medic-content">
+          <div class="doctor-tree-div">
+              <div id="doctor-tree"></div>
+          </div>
+        </div>
+
+        <!-- HISTORY TREE MAIN DIV FOR D3 CONTENT GEN -->
+        <div id="history" class="main-content history-content d-none">
+          <div class="history-tree-div">
+              <div id="history-tree"></div>
+          </div>
+        </div>
+
+        <!-- EAGLE VIEW MAIN DIV FOR D3 CONTENT GEN -->
+        <div id="eagle_container" class="d-none">
+          <div id="eagle-view"></div>
+        </div>
+
+      </section>
+
+      <!-- LOADING GIF IMAGE IS IN HERE -->
+      <div id="loadingDiv" class="d-none">
+        <img src="img/Spinner-1s-200px.svg" alt="">
+      </div>
+
+    </div>
+      <!-- JQUERY UI IS LOADED -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+      <!-- D3 IS LOADED -->
+      <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js'></script> -->
+      <script src='js/d3.min.js'></script>
+
+      <!-- MOMENT LIB IS LOADED -->
+      <script  src="js/moment.min.js"></script>
+
+      <!-- PIKADAY LIB IS LOADED -->
+      <script  src="js/pikaday.js"></script>
+
+      <!-- INITIAL COLORING VALIDATION SCHEME IS LOADED -->
+      <!-- <script  src="js/data2.js"></script> -->
+      <script  src="js/1_general.js"></script> <!-- O -->
+
+  </body>
+</html>

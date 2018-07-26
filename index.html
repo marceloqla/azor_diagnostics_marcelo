@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Azor Diagnostics</title>
+    <link rel="icon" href="img/azor_logo_II_Crop_circle.png">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div id="login" class="">
+      <form id="login-form">
+        <img class="img-23" src="img/azor_logo_II_vert.png" alt="">
+        <input type="text" id="username" placeholder="Digite seu Usuário">
+        <input type="password" id="password" placeholder="Digite sua Senha">
+        <input type="button" id="login-btn" value="Login">
+      </form>
+    </div>
+    <script type="text/javascript">
+      document.getElementById('login-btn').setAttribute("onclick", "logintry()");
+      function logintry() {
+        if (document.getElementById('username').value.split("_").length >= 2) {
+          if (document.getElementById('password').value === 'diag') {
+            loginsuccess();
+          } else {
+            alert("Login Inválido");
+          }
+        } else {
+          alert("Login Inválido");
+        }
+      };
+
+      function loginsuccess() {
+        setTimeout(function(){
+          window.location = "../login/" + "?username=" + document.getElementById('username').value;
+        },0);
+      };
+    </script>
+  </body>
+</html>

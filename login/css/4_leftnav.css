@@ -1,0 +1,17 @@
+.current-controls {
+  display: grid;
+  grid-template-rows: 8vh 2vh 8vh 2vh 8vh 2vh 8vh;
+  grid-template-areas: "im1" "sp1" "im12" "sp2" "im2" "sp3" "im3";
+}
+    #divt1 {
+      grid-area: im1;
+    }
+    #divt2 {
+      grid-area: im12;
+    }
+    #dive2 {
+      grid-area: im2;
+    }
+    #divex3 {
+      grid-area: im3;
+    }

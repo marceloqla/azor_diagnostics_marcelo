@@ -1,0 +1,38 @@
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+.node {
+  margin-bottom: 1em;
+  /*margin-bottom: 1vmin;*/
+  cursor: pointer;
+}
+.node circle.fill {
+  stroke-width: 1px !important;
+  r: 0.3em !important;
+  fill: #777aca !important;
+  stroke: black !important;
+}
+.node text {
+  /*font: 12px sans-serif;*/
+  font: 0.8em sans-serif;
+}
+.node circle.green_c {
+  stroke-width: 1px !important;
+  r: 0.3em !important;
+  fill: #73ce73 !important;
+  stroke: black !important;
+}
+.node circle.yellow_c {
+  stroke-width: 1px !important;
+  r: 0.3em !important;
+  fill: yellow !important;
+  stroke: black !important;
+}
+.node circle.red_c {
+  stroke-width: 1px !important;
+  r: 0.3em !important;
+  fill: #e87a7a !important;
+  stroke: black !important;
+}
